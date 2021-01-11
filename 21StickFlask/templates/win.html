@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block content %}
+    {% if win == 'Computer' %}
+    <img src="/static/ter.jpg" alt="ter">
+    <h1>Компьютер выграл!</h1>
+    {% elif win == 'Player' %}
+    <img src="/static/hum.jpg" alt="ter">
+    <h1>Вы выграли!</h1>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,15 @@
+        body {
+            max-width: 600px;
+            font-size: 16pt;
+            font-family: Tahoma, Arial, sans-serif;
+            margin: 8pt auto;
+        }
+        .links {
+            font-size: 120%;
+            text-align: center;
+        }
+        .end {
+            font-size: 220%;
+            text-align: center;
+            font-weight: bold;
+        }

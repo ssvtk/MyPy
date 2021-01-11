@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <h1>21 палочка online</h1>
+    <p>Палочек было на столе: {{ stics_on_table }}</p>
+    <p>Вы взяли: {{ stick_number }}</p>
+    <p>Осталось: {{ sticks_after_h }}</p>
+    <p>Я беру: {{ comp_stick }}</p>
+    <p>Сейчас палочек на столе: {{ sticks_after_cpu }}</p>
+    <p>Сколько возьмёте? Тот, кто возьмёт последнюю, проиграет.</p>
+    {% if sticks_after_cpu >= 3 %}
+    <p class="links">
+        <a href="/take/1/">Возьму 1</a> | <a href="/take/2/">Возьму 2</a> | <a href="/take/3/">Возьму 3</a>
+    </p>
+    {% elif sticks_after_cpu == 2 %}
+     <p class="links">
+        <a href="/take/1/">Возьму 1</a> | <a href="/take/2/">Возьму 2</a>
+    </p>
+    {% elif sticks_after_cpu == 1 %}
+     <p class="links">
+        <a href="/take/1/">Возьму 1</a>
+    </p>
+    {% endif %}
+{% endblock %}
